@@ -37,7 +37,7 @@ jobs:
       run: |   
         cd /opt/hostedtoolcache/go
         rm -rf /opt/hostedtoolcache/go/1.14.12
-        mv 1.15.5 1.14.12
+   #    mv 1.15.5 1.14.12
     - name: Build Firmware
       env:
         TNAME: "ZTE_E8820s"
