@@ -1,4 +1,4 @@
-name: Build MT7621-2
+name: ZTE_E8820s
 
 on: 
   release:
