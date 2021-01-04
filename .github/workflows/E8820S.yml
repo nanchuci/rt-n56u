@@ -3,7 +3,7 @@ name: Build E8820s
 on: 
   release:
     types: [published]
-#  push:
+  push:
 #    tags:
 #    - 'v*'
     branches: 
