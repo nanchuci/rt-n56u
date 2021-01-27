@@ -73,8 +73,10 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config    ### 阿里DDNS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' .config       ### 内网穿透FRPC
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' .config       ### 内网穿透FRPS
-        sed -i '/CONFIG_FIRMIMARE_INCLUDE_XUPNPD/d' .config    ### TPTV
+        sed -i '/CONFIG_FIRMIMARE_INCLUDE_XUPNPD/d' .config    ### IPTV
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d' .config   ###删除配置项ZEROTIER
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUARD-GO/d' .config    ### WIREGUARD-GO
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUARD-TOOLS/d' .config   ###删除配置项WIREGUARD-TOOLS
         ###去广告
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS/d' .config   ### TPT2SOCKS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ADBYBY/d' .config      ### 广告过滤，adbyby plus+
@@ -101,6 +103,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SSSERVER/d' .config    ###SS server,服务端
         sed -i '/CONFIG_FIRMWARE_INCLUDE_V2RAY/d' .config       ###v2ray 执行文件，不集成会从网上下载
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config      ###trojan执行文件，不集成会从网上下载
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_3PROXY/d' .config      ###3PROXY,服务      
         #校园网相关
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' .config   ### 校园网相关 MENTOHUST
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d' .config  ### 校园网相关 SCUTCLIENT
@@ -148,8 +151,10 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config  #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config     #内网穿透frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
-        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD TPTV0.3M
+        echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD IPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
+        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD-GO=y" >> .config  #WIREGUARD-GO
+        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD-TOOLS=y" >> .config #WIREGUARD-TOOLS
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config      #广告过滤adbyby plus+
@@ -176,6 +181,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config    #SS server，服务端
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config       #集成v2ray 执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config      #集成trojan执行文件
+        echo "CONFIG_FIRMWARE_INCLUDE_3PROXY=y" >> .config     #代理3proxy
         #校园网相关
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config   #校园网相关 MentoHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config  #校园网相关 SCUTCLIENT
