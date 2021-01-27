@@ -12,5 +12,6 @@ download_test:
 
 romfs:
 	$(ROMFSINST) $(THISDIR)/redsocks /usr/bin/redsocks
+	cp -fP $(STAGEDIR)/lib/libevent_core-2.1.so.* $(ROMFSDIR)/lib	
 	$(ROMFSINST) $(THISDIR)/redsocks.sh /usr/bin/redsocks.sh
 	$(ROMFSINST) -p +x /usr/bin/redsocks.sh
