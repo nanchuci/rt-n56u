@@ -632,7 +632,7 @@ struct nvram_pair router_defaults[] = {
 
 #if defined(APP_SHADOWSOCKS)
 	/* shadowsocks */
-	{ "ss_type", "0" },
+	{ "ss_type", "0" }, //0=ss, 1=ssr
 	{ "global_server", "nil" },
 	{ "backup_server", "nil" },
 	{ "udp_relay_server", "nil" },
@@ -661,7 +661,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ss_schedule", "00000000000" },
 
 	{ "ss_enable", "0" },
-	{ "ss_mode", "1" },
+	{ "ss_mode", "1" }, 	//0=全局代理,1=绕过大陆,2=gfwlist
 	{ "ss_server", "127.0.0.1" },
 	{ "ss_server_port", "8989" },
 	{ "ss_key", "Secret" },
@@ -671,7 +671,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ss_local_port", "1080" },
 	{ "ss_mtu", "1492" },
 	{ "ss_router_proxy", "1" },
-	{ "ss_lower_port_only", "1" },
+	{ "ss_lower_port_only", "1" },		//1:22-1023;2:53,80,443
 	{ "ss_timeout", "60"},
 	{ "ss_protocol", "origin"},
 	{ "ss_proto_param", ""},
@@ -875,6 +875,7 @@ struct nvram_pair router_defaults[] = {
 	{ "force_mld", "0" },
 	{ "udpxy_enable_x", "0" },
 	{ "udpxy_clients", "10" },
+	{ "udpxy_renew_period", "120" },
 #if defined(APP_XUPNPD)
 	{ "xupnpd_enable_x", "0" },
 	{ "xupnpd_udpxy", "0" },
