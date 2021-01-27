@@ -153,8 +153,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config     #内网穿透frps
         echo "CONFIG_FIRMIMARE_INCLUDE_XUPNPD=y" >> .config  #XUPNPD IPTV0.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier大小1.3M
-        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD-GO=y" >> .config  #WIREGUARD-GO
-        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD-TOOLS=y" >> .config #WIREGUARD-TOOLS
+        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD-GO=n" >> .config  #WIREGUARD-GO
+        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD-TOOLS=n" >> .config #WIREGUARD-TOOLS
         #去广告
         echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config      #广告过滤adbyby plus+
