@@ -24,11 +24,11 @@ config MT7603E_MBSS_SUPPORT
 config MT7603E_SNIFFER_SUPPORT
 	bool "SNIFFER"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 config MT7603E_CFG80211_SUPPORT
 	bool "CFG80211"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 
 config MT7603E_SNIFFER_MIB_CMD
 	bool "SNIFFER_MIB_CMD"
@@ -38,7 +38,7 @@ config MT7603E_SNIFFER_MIB_CMD
 config MT7603E_ALL_NET_EVENT
 	bool "ALL_NET_EVENT"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 
 config MT7603E_ACL_V2_SUPPORT
 	bool "ACL_V2"
@@ -48,12 +48,12 @@ config MT7603E_NEW_MBSSID_MODE
 	bool "New MBSSID MODE"
 	depends on MT7603E_RLT_AP_SUPPORT && MT7603E_MBSS_SUPPORT
 	depends on RALINK_RT3883 || RALINK_RT3352 || RALINK_RT5350 || MT7603E_RALINK_RT6352 || RALINK_MT7620
-	default n
+	default y
 
 config MT7603E_ENHANCE_NEW_MBSSID_MODE
     bool "Enhanced MBSSID mode"
     depends on MT7603E_NEW_MBSSID_MODE
-    default n
+    default y
 
 config MT7603E_APCLI_SUPPORT
 	bool "AP-Client Support"
@@ -64,7 +64,7 @@ config ROAMING_ENHANCE_SUPPORT
 	bool "Roaming Enhance Support"
 	depends on MT7603E_RLT_AP_SUPPORT
 	depends on APCLI_SUPPORT
-	default n
+	default y
 
 config MT7603E_MULTI_APCLI_SUPPORT
 	bool "MULTI AP-Client Support"
@@ -97,28 +97,28 @@ config MT7603E_DOT11R_FT_SUPPORT
 config MT7603E_DOT11K_RRM_SUPPORT
 	bool "802.11k Radio Resource Management"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 
 config MT7603E_WNM_SUPPORT
 	bool "802.11v Wireless Network Management Support"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 
 config MT7603E_INTERWORKING
 	bool "802.11u Interworking/Gas Support"
         depends on MT_AP_SUPPORT
-        default n
+        default y
 
 config MT7603E_MAP_SUPPORT
 	bool "Multi-AP Support"
 	depends on MT_AP_SUPPORT
 	#select MBO_SUPPORT
-	default n
+	default y
 
 config MT7603E_BAND_STEERING_7603
 	bool "Band Steering"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 
 config MT7603E_LLTD_SUPPORT
 	bool "LLTD (Link Layer Topology Discovery Protocol)"
@@ -132,7 +132,7 @@ config MT7603E_NINTENDO_AP
 config MT7603E_COC_SUPPORT
 	bool "CoC Support"
 	depends on MT7603E_RLT_AP_SUPPORT
-	default n
+	default y
 
 #config  MT7603E_RT2860V2_SNMP
 #	bool "Net-SNMP Support"
