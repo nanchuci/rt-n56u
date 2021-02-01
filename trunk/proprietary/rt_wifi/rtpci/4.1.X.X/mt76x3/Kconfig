@@ -39,7 +39,7 @@ config MT7603E_WSC_NFC_SUPPORT
 config MT7603E_DOT11N_DRAFT3
 	bool "802.11n Draft3"
 	depends on WIFI_DRIVER
-    default n
+    default y
     
 #config MT7603E_DOT11_VHT_AC
 #	bool "802.11 ac"
@@ -51,15 +51,15 @@ config MT7603E_DOT11W_PMF_SUPPORT
 	depends on WIFI_DRIVER
     default y
 
-#config MT7603E_TXBF_SUPPORT
-#    bool "Tx Bean Forming Support"
-#    depends on WIFI_DRIVER
-#    default n
+config MT7603E_TXBF_SUPPORT
+    bool "Tx Bean Forming Support"
+    depends on WIFI_DRIVER
+    default y
 
-#config MT7603E_WMM_ACM_SUPPORT
-#	bool "WMM ACM"
-#	depends on WIFI_DRIVER
-#   default n
+config MT7603E_WMM_ACM_SUPPORT
+	bool "WMM ACM"
+	depends on WIFI_DRIVER
+    default y
 	
 config MT7603E_LLTD_SUPPORT
 	bool "LLTD (Link Layer Topology Discovery Protocol)"
@@ -69,7 +69,7 @@ config MT7603E_LLTD_SUPPORT
 config MT7603E_QOS_DLS_SUPPORT
 	bool "802.11e DLS ((Direct-Link Setup) Support"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 
 config MT7603E_WAPI_SUPPORT
@@ -85,7 +85,7 @@ config MT7603E_CARRIER_DETECTION_SUPPORT
 config MT7603E_IGMP_SNOOP_SUPPORT
 	bool "IGMP Snooping"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_BLOCK_NET_IF
 	bool "NETIF Block"
@@ -105,7 +105,7 @@ config MT7603E_TXBF_SUPPORT
 config MT7603E_DMA_CACHE_OPTIMIZE
 	bool "optimize dma cache mapping for internal mips platform"
 	depends on WIFI_DRIVER
-	default n
+	default y
 
 #config MT7603E_VIDEO_TURBINE_SUPPORT
 #	bool "Video Turbine support"
@@ -130,17 +130,17 @@ config MT7603E_NEW_RATE_ADAPT_SUPPORT
 config MT7603E_AGS_SUPPORT
 	bool "Adaptive Group Switching"
 	depends on WIFI_DRIVER && MT7603E_RATE_ADAPTION
-    default n
+    default y
     
 config MT7603E_IDS_SUPPORT
 	bool "IDS (Intrusion Detection System) Support"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_WIFI_WORK_QUEUE
 	bool "Work Queue"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_WIFI_SKB_RECYCLE
     bool "SKB Recycle(Linux)"
@@ -175,7 +175,7 @@ config MT7603E_MBO_SUPPORT
 	select DOT11R_FT_SUPPORT
 	select DOT11W_PMF_SUPPORT
 	select PASSPOINT_R2
-	default n
+	default y
 config MT7603E_RTMP_FLASH_SUPPORT
 	bool "Flash Support"
 	depends on WIFI_DRIVER
@@ -183,12 +183,12 @@ config MT7603E_RTMP_FLASH_SUPPORT
 
 config MT7603E_MWDS_SUPPORT
     bool "Mixed WDS(MWDS)"
-    default n
+    default y
 
 config MT7603E_AIR_MONITOR_SUPPORT
 	bool "Air Monitor Support"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_STA_FORCE_ROAM_SUPPORT
 	bool "Sta Force Roam Support"
@@ -198,12 +198,12 @@ config MT7603E_STA_FORCE_ROAM_SUPPORT
 config MT7603E_ROAMING_ENHANCE_SUPPORT
 	bool "Roaming Enhance Support"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_WIFI_FWD_UPDATED
 	bool "Wifi Forwarding Support Update"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT_BTCOEX_CONCURRENT
     bool "Coexisence Event Notify between BT and WiFi"
@@ -213,12 +213,12 @@ config MT_BTCOEX_CONCURRENT
 config MT7603E_LED_CONTROL_SUPPORT
 	bool "LED Support"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_SINGLE_SKU_V2
     bool "Single SKU V2"
     depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_HW_ANTENNA_DIVERSITY
 	bool "Antenna Diversity Support"
@@ -262,13 +262,13 @@ config MT7603E_RTMP_TEMPERATURE_CALIBRATION
 config MT7603E_HOTSPOT
 	bool "Passpoint-R1"
 	depends on WIFI_DRIVER
-    default n
+    default y
 
 config MT7603E_PASSPOINT_R2
 	bool "Passpoint Release-2 Support"
 	depends on MT7603E_HOTSPOT
 	select MT7603E_DOT11W_PMF_SUPPORT
-	default n
+	default y
 
 config MT7603E_UAPSD
 	bool "MT7603E_UAPSD support"
