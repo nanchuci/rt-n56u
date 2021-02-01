@@ -12,7 +12,7 @@ config  MT76X2_AP_LED
 config  MT76X2_AP_LED_SOFT
 	bool "Soft LED support"
 	depends on MT76X2_AP && !MT76X2_AP_LED && RALINK_GPIO_LED
-	default y
+	default n
 
 config  MT76X2_AP_LED_SOFT_GPIO
 	int "Soft LED GPIO pin (dev #0)"
@@ -57,53 +57,53 @@ config  MT76X2_AP_APCLI_CERT
 	bool "AP-Client TGn Cert support"
 	depends on MT76X2_AP
 	depends on MT76X2_AP_APCLI
-	default y
+	default n
 
 config  MT76X2_AP_APCLI_AUTO_BW
 	bool "AP-Client Auto Bandwidth Support"
 	depends on MT76X2_AP
 	depends on MT76X2_AP_APCLI
-	default y
+	default n
 
 config  MT76X2_AP_MAC_REPEATER
 	bool "MAC Repeater Mode support"
 	depends on MT76X2_AP
 	depends on MT76X2_AP_APCLI
-	default y
+	default n
 
 config  MT76X2_AP_MWDS
 	bool "Wireless Mixed Bridge Mode (MWDS)"
 	depends on MT76X2_AP
 	select MT76X2_AP_APCLI
-	default y
+	default n
 
 config  MT76X2_AP_SMART_MESH
 	bool "Smart Mesh"
 	depends on MT76X2_AP
 	select MT76X2_AP_MWDS
-	default y
+	default n
 
 config  MT76X2_AP_CON_WPS
 	bool "Concurrent WPS support"
 	depends on MT76X2_AP
 	depends on MT76X2_AP_APCLI
 	depends on RT_WSC_V2
-	default y
+	default n
 
 config  MT76X2_AP_AIRPLAY
 	bool "AirPlay support"
 	depends on MT76X2_AP
-	default y
+	default n
 
 config  MT76X2_AP_DFS
 	bool "DFS support"
 	depends on MT76X2_AP
-	default y
+	default n
 
 config  MT76X2_AP_CARRIER
 	bool "Carrier Detection support"
 	depends on MT76X2_AP
-	default y
+	default n
 
 config  MT76X2_AP_GREENAP
 	bool "Green AP mode support"
@@ -113,12 +113,12 @@ config  MT76X2_AP_GREENAP
 config  MT76X2_AP_IDS
 	bool "IDS (Intrusion Detection System) support"
 	depends on MT76X2_AP
-	default y
+	default n
 
 config  MT76X2_AP_DLS
 	bool "802.11e DLS (Direct-Link Setup) support"
 	depends on MT76X2_AP
-	default y
+	default n
 
 config  MT76X2_AP_80211AC_VHT
 	bool "802.11ac support"
@@ -130,7 +130,7 @@ config  MT76X2_AP_TXBF_SUPPORT
 	bool "Tx Beam Forming support"
 	depends on MT76X2_AP
 	depends on (RT_FIRST_IF_MT7612E || RT_SECOND_IF_MT7612E)
-	default y
+	default n
 
 choice
 	prompt "MT7620 Power Design"
