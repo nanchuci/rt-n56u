@@ -41,7 +41,7 @@ jobs:
         mv 1.15.8 1.14.15
     - name: Build Firmware
       env:
-        TNAME: "MSG1500-7615-SPI"
+        TNAME: "A-040W-Q-SPI"
       run: |
         cwd=`pwd`
         CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
